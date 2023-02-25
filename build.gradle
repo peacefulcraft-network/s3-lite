@@ -6,7 +6,7 @@ allprojects {
     apply plugin: 'java-library'
 
     group = "io.github.linktosriram.s3lite"
-    version = "0.0.2-SNAPSHOT"
+    version = "0.2.0"
 
     java {
         toolchain {
