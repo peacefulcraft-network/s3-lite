@@ -67,10 +67,23 @@ public final class Region {
     // AWS GovCloud (US-West)
     public static final Region US_GOV_WEST_1 = Region.of("us-gov-west-1", create("https://s3.us-gov-west-1.amazonaws.com"));
 
+	/*
+		OVH Endpoints
+		https://docs.ovh.com/us/en/storage/object-storage/s3/location/
+	*/
+	// OVH S3 Standard BHS Canada
+    public static final Region OVH_BHS_S3_STANDARD = Region.of("OVH_BHS_S3_STANDARD", create("https://s3.bhs.io.cloud.ovh.net"));
+
+	// OVH S3 High-performance BHS Canada
+    public static final Region OVH_BHS_S3_PERF = Region.of("OVH_BHS_S3_PERF", create("https://s3.bhs.perf.cloud.ovh.net"));
+
+	// OVH Legacy Swift, S3 compatible BHS Canada
+    public static final Region OVH_BHS_SWIFT_LEGACY = Region.of("OVH_BHS_SWIFT_LEGACY", create("https://s3.bhs.cloud.ovh.net"));
+
     private static final List<Region> REGIONS = unmodifiableList(asList(US_EAST_1, US_EAST_2, US_WEST_1, US_WEST_2, AP_EAST_1,
         AP_SOUTH_1, AP_NORTHEAST_1, AP_NORTHEAST_2, AP_NORTHEAST_3, AP_SOUTHEAST_1, AP_SOUTHEAST_2, AP_SOUTHEAST_3, AF_SOUTH_1,
         EU_WEST_1, EU_WEST_2, EU_WEST_3, EU_CENTRAL_1, EU_NORTH_1, EU_SOUTH_1, CA_CENTRAL_1, SA_EAST_1, ME_CENTRAL_1, ME_SOUTH_1,
-        CN_NORTH_1, CN_NORTHWEST_1, US_GOV_EAST_1, US_GOV_WEST_1));
+        CN_NORTH_1, CN_NORTHWEST_1, US_GOV_EAST_1, US_GOV_WEST_1, OVH_BHS_S3_STANDARD, OVH_BHS_S3_PERF, OVH_BHS_SWIFT_LEGACY));
 
     public static Region of(final String regionName, final URI endpoint) {
         return new Region(regionName, endpoint);

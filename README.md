@@ -1,3 +1,6 @@
+# What is this fork?
+We use software that depends on this library for S3 operations, but we use OVH Cloud for our S3 storage. S3-Lite doesn't support custom S3 endpoints. We made this fork just to add some S3 endpoints for OVH's object storage.
+
 # s3-lite
 
 A Barebones Java client for AWS S3

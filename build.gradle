@@ -51,3 +51,21 @@ project(':http-client-url-connection') {
         api project(':http-client-spi')
     }
 }
+
+plugins {
+  id 'maven-publish'
+}
+
+publishing {
+
+  repositories {
+    maven {
+      name = "GitHubPackages"
+      url = "https://maven.pkg.github.com/peacefulcraft-network/s3-lite"
+      credentials {
+        username = System.getenv("GITHUB_ACTOR")
+        password = System.getenv("GITHUB_TOKEN")
+      }
+    }
+  }
+}
